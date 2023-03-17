@@ -1,0 +1,11 @@
+name: LightKungFu
+version: '0.0.2'
+main: cn.whitesoul.lightkungfu.Main
+depend:
+  - ParticleLib
+commands:
+    lightkungfu:
+        description: 轻功
+        aliases: [lkf]
+        permission: lightkungfu.use
+        permission-message: "§f[§a轻功§f] §e你没有权限使用此命令"
