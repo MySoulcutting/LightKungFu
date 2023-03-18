@@ -9,7 +9,9 @@ Message:
   tired: "§f[§a轻功§f] §e你累了休息一下吧~"
   nopoint: "§f[§a轻功§f] §e你没有足够的点数"
   maxlevel: "§f[§a轻功§f] §e你已经达到最高级,无法升级"
-  success: "§f[§a轻功§f] §e加点成功,当前等级: §e{0}"
+  success: "&f[&a轻功&f] &e加点成功,当前等级: &e%0%"
+#取消掉落伤害
+CancelFallDamage: true
 #Lore检测  可以写到物品的Lore里面 例如: &a连跳次数: +2
 Lore:
   Enable: true

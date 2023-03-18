@@ -2,6 +2,7 @@ package cn.whitesoul.lightkungfu.inventory;
 
 import cn.whitesoul.lightkungfu.data.Map;
 import cn.whitesoul.lightkungfu.utils.Config;
+import cn.whitesoul.wslib.message.Message;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -25,7 +26,7 @@ public class InventoryClick implements Listener {
                         if (points >= 1) {
                             Map.levels.put(uuid, Map.levels.get(uuid) + 1);
                             Map.points.put(uuid, Map.points.get(uuid) - 1);
-                            player.sendMessage(Config.success.replace(Map.levels.get(uuid).toString(), "{0}"));
+                            Message.sendMessage(player,Config.success.replace("%0%", Map.levels.get(uuid).toString()));
                             player.closeInventory();
                             MainInv.open(player);
                         } else {

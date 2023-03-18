@@ -14,6 +14,7 @@ public class Config {
     public static String maxlevel = Main.INSTANCE.getConfig().getString("Message.maxlevel");
     public static boolean soundsEnable = Main.INSTANCE.getConfig().getBoolean("Sounds.Enable");
     public static boolean particleEnable = Main.INSTANCE.getConfig().getBoolean("Particle.Enable");
+    public static boolean cancelFallDamage = Main.INSTANCE.getConfig().getBoolean("CancelFallDamage");
 
 
 }

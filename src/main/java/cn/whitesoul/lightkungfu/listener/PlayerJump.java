@@ -43,7 +43,6 @@ public class PlayerJump implements Listener {
             //播放音效
         if (Config.soundsEnable){
             player.playSound(player.getLocation(), Sound.valueOf(Main.INSTANCE.getConfig().getString("Sounds.Sound")), Main.INSTANCE.getConfig().getInt("Sounds.Volume"), Main.INSTANCE.getConfig().getInt("Sounds.Pitch"));
-            return;
         }
             //特效
         if (Config.particleEnable){
@@ -52,7 +51,6 @@ public class PlayerJump implements Listener {
                     .setColor(Color.WHITE);
             circle.setRadius(0.3);
             circle.show();
-            return;
         }
             //限制次数
             jumps.put(player.getUniqueId(), jumps.get(player.getUniqueId()) + 1);

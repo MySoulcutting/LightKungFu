@@ -23,7 +23,5 @@ public class PlayerQuit implements Listener {
         preparedStatement.setInt(2, Map.points.get(uuid));
         preparedStatement.setString(3, uuid.toString());
         preparedStatement.executeUpdate();
-        //移除玩家数据
-        Map.levels.remove(uuid);
     }
 }
