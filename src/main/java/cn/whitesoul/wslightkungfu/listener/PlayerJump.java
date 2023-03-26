@@ -1,8 +1,8 @@
-package cn.whitesoul.lightkungfu.listener;
+package cn.whitesoul.wslightkungfu.listener;
 
-import cn.whitesoul.lightkungfu.Main;
-import cn.whitesoul.lightkungfu.data.Map;
-import cn.whitesoul.lightkungfu.utils.Config;
+import cn.whitesoul.wslightkungfu.Main;
+import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.utils.Config;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,10 +12,9 @@ import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.util.Vector;
 import top.zoyn.particlelib.pobject.Circle;
 
-import java.sql.SQLException;
 import java.util.UUID;
 
-import static cn.whitesoul.lightkungfu.data.Map.jumps;
+import static cn.whitesoul.wslightkungfu.data.Map.jumps;
 
 public class PlayerJump implements Listener {
 

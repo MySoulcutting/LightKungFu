@@ -1,7 +1,7 @@
-package cn.whitesoul.lightkungfu.inventory;
+package cn.whitesoul.wslightkungfu.inventory;
 
-import cn.whitesoul.lightkungfu.data.Map;
-import cn.whitesoul.lightkungfu.utils.Config;
+import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.utils.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

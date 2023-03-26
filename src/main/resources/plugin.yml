@@ -1,8 +1,9 @@
-name: LightKungFu
-version: '0.0.2'
-main: cn.whitesoul.lightkungfu.Main
+name: WsLightKungFu
+version: '0.0.3'
+main: cn.whitesoul.wslightkungfu.Main
 depend:
   - ParticleLib
+  - WsLib
 commands:
     lightkungfu:
         description: 轻功

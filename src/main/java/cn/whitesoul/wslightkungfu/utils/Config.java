@@ -1,6 +1,6 @@
-package cn.whitesoul.lightkungfu.utils;
+package cn.whitesoul.wslightkungfu.utils;
 
-import cn.whitesoul.lightkungfu.Main;
+import cn.whitesoul.wslightkungfu.Main;
 
 public class Config {
     public static String mysqlUrl = Main.INSTANCE.getConfig().getString("Mysql.Url");

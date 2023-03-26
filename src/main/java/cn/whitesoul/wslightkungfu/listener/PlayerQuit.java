@@ -1,6 +1,6 @@
-package cn.whitesoul.lightkungfu.listener;
+package cn.whitesoul.wslightkungfu.listener;
 
-import cn.whitesoul.lightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.data.Map;
 import cn.whitesoul.wslib.database.mysql.Mysql;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

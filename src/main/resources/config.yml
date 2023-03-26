@@ -12,7 +12,7 @@ Message:
   success: "&f[&a轻功&f] &e加点成功,当前等级: &e%0%"
 #取消掉落伤害
 CancelFallDamage: true
-#Lore检测  可以写到物品的Lore里面 例如: &a连跳次数: +2
+#Lore检测  可以写到物品的Lore里面 例如: &a连跳次数: +2   还没写
 Lore:
   Enable: true
   lore: "&a连跳次数:"

@@ -1,8 +1,8 @@
-package cn.whitesoul.lightkungfu.command;
+package cn.whitesoul.wslightkungfu.command;
 
-import cn.whitesoul.lightkungfu.Main;
-import cn.whitesoul.lightkungfu.data.Map;
-import cn.whitesoul.lightkungfu.inventory.MainInv;
+import cn.whitesoul.wslightkungfu.Main;
+import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.inventory.MainInv;
 import cn.whitesoul.wslib.message.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -33,8 +33,8 @@ public class MainCommand implements CommandExecutor {
             int points = Integer.parseInt(args[2]);
             UUID uuid = target.getUniqueId();
             Map.points.put(uuid,Map.points.get(uuid) + points);
-            sender.sendMessage("§f[§a轻功§f] §e你给予玩家§b" + target.getName() + "§d" + points + "§e点数!");
-            Message.sendMessage(target,"§f[§a轻功§f] §e你获得了§b" + points + "§e点数!");
+            sender.sendMessage("§f[§a轻功§f] §e你给予玩家§b " + target.getName() + "§d" + points + " §e点数!");
+            Message.sendMessage(target,"§f[§a轻功§f] §e你获得了§b " + points + " §e点数!");
         }
         if (args.length == 1 && args[0].equalsIgnoreCase("reload")){
             Main.INSTANCE.reloadConfig();
