@@ -28,7 +28,7 @@ public final class Main extends JavaPlugin {
                 "LEVELS INT(11) NOT NULL, " +
                 "POINTS INT(11) NULL, " +
                 "PRIMARY KEY ( id )");
-        ServerInfo.sendInfo("§f[§a轻功§f] §c插件已加载 V0.0.3");
+        ServerInfo.sendInfo("§f[§a轻功§f] §c插件已加载 V1.0.3");
         getServer().getPluginManager().registerEvents(new PlayerJump(),this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(),this);
         getServer().getPluginManager().registerEvents(new PlayerQuit(),this);
@@ -39,10 +39,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        ServerInfo.sendInfo("§f[§a轻功§f] §c插件已加载 V0.0.3");
+        ServerInfo.sendInfo("§f[§a轻功§f] §c插件已加载 V1.0.3");
         Mysql.closeConn();
-        jumps.clear();
-        levels.clear();
-        points.clear();
     }
 }

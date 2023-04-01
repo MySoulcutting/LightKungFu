@@ -24,9 +24,11 @@ public class MainCommand implements CommandExecutor {
             sender.sendMessage("§a§l/lightkungfu reload");
             sender.sendMessage("§b§l§o——重载配置文件");
         }
-        if (args.length == 1 && args[0].equalsIgnoreCase("gui")){
+        if (sender.hasPermission("lightkungfu.use") && args.length == 1 && args[0].equalsIgnoreCase("gui")){
             sender.sendMessage("§f[§a轻功§f] §e打开轻功加点");
             MainInv.open((Player) sender);
+        } else {
+            Message.sendMessage((Player) sender,"&c你没有权限使用");
         }
         if (sender.hasPermission("lightkungfu.admin") && args.length == 3 && args[0].equalsIgnoreCase("add")){
             Player target = Bukkit.getPlayer(args[1]);

@@ -1,5 +1,5 @@
 name: WsLightKungFu
-version: '0.0.3'
+version: '1.0.3'
 main: cn.whitesoul.wslightkungfu.Main
 depend:
   - ParticleLib
@@ -8,5 +8,3 @@ commands:
     lightkungfu:
         description: 轻功
         aliases: [lkf]
-        permission: lightkungfu.use
-        permission-message: "§f[§a轻功§f] §e你没有权限使用此命令"
