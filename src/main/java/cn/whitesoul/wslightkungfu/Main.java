@@ -1,5 +1,6 @@
 package cn.whitesoul.wslightkungfu;
 
+import cn.whitesoul.wslib.database.mysql.SQL;
 import cn.whitesoul.wslightkungfu.command.MainCommand;
 import cn.whitesoul.wslightkungfu.inventory.InventoryClick;
 import cn.whitesoul.wslightkungfu.listener.*;
@@ -21,6 +22,12 @@ public final class Main extends JavaPlugin {
         saveDefaultConfig();
         INSTANCE = this;
         Mysql.setConn(mysqlUrl, mysqlDatabase, mysqlName, mysqlPassword);
+        SQL.createTable("lightkungfu_table","id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT, " +
+                "UUID VARCHAR(255) NULL, " +
+                "PLAYER VARCHAR(255) NULL, " +
+                "LEVELS INT(11) NOT NULL, " +
+                "POINTS INT(11) NULL, " +
+                "PRIMARY KEY ( id )");
         ServerInfo.sendInfo("§f[§a轻功§f] §c插件已加载 V0.0.3");
         getServer().getPluginManager().registerEvents(new PlayerJump(),this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(),this);
@@ -32,7 +39,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        ServerInfo.sendInfo("§f[§a轻功§f] §c插件已加载 V0.0.2");
+        ServerInfo.sendInfo("§f[§a轻功§f] §c插件已加载 V0.0.3");
         Mysql.closeConn();
         jumps.clear();
         levels.clear();

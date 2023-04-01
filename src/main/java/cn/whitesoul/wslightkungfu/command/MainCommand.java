@@ -28,7 +28,7 @@ public class MainCommand implements CommandExecutor {
             sender.sendMessage("§f[§a轻功§f] §e打开轻功加点");
             MainInv.open((Player) sender);
         }
-        if (args.length == 3 && args[0].equalsIgnoreCase("add")){
+        if (sender.hasPermission("lightkungfu.admin") && args.length == 3 && args[0].equalsIgnoreCase("add")){
             Player target = Bukkit.getPlayer(args[1]);
             int points = Integer.parseInt(args[2]);
             UUID uuid = target.getUniqueId();
@@ -36,7 +36,7 @@ public class MainCommand implements CommandExecutor {
             sender.sendMessage("§f[§a轻功§f] §e你给予玩家§b " + target.getName() + "§d" + points + " §e点数!");
             Message.sendMessage(target,"§f[§a轻功§f] §e你获得了§b " + points + " §e点数!");
         }
-        if (args.length == 1 && args[0].equalsIgnoreCase("reload")){
+        if (sender.hasPermission("lightkungfu.admin") && args.length == 1 && args[0].equalsIgnoreCase("reload")){
             Main.INSTANCE.reloadConfig();
             Message.sendMessage((Player) sender,"&f[&a轻功&f] &e重载成功!");
         }
