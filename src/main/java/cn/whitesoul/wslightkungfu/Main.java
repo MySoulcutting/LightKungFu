@@ -10,10 +10,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.sql.SQLException;
 
-import static cn.whitesoul.wslightkungfu.data.Map.*;
 import static cn.whitesoul.wslightkungfu.utils.Config.*;
 
 public final class Main extends JavaPlugin {
+
     public static Main INSTANCE;
 
 
