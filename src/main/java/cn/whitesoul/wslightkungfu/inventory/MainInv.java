@@ -1,6 +1,6 @@
 package cn.whitesoul.wslightkungfu.inventory;
 
-import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.data.CaChe;
 import cn.whitesoul.wslightkungfu.utils.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -32,9 +32,9 @@ public class MainInv {
         ItemMeta paperMeta = paper.getItemMeta();
         paperMeta.setDisplayName("§d§l轻功信息");
         List<String> lore = new ArrayList<>();
-        lore.add("§a§l当前点数: §e"+ Map.points.get(uuid));
+        lore.add("§a§l当前点数: §e"+ CaChe.points.get(uuid));
         lore.add("");
-        lore.add("§a§l当前等级: §e"+ Map.levels.get(uuid));
+        lore.add("§a§l当前等级: §e"+ CaChe.levels.get(uuid));
         paperMeta.setLore(lore);
         paper.setItemMeta(paperMeta);
         inventory.setItem(1,paper);

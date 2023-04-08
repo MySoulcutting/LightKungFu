@@ -1,7 +1,7 @@
 package cn.whitesoul.wslightkungfu.listener;
 
 import cn.whitesoul.wslightkungfu.Main;
-import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.data.CaChe;
 import cn.whitesoul.wslightkungfu.utils.Config;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
@@ -14,7 +14,7 @@ import top.zoyn.particlelib.pobject.Circle;
 
 import java.util.UUID;
 
-import static cn.whitesoul.wslightkungfu.data.Map.jumps;
+import static cn.whitesoul.wslightkungfu.data.CaChe.jumps;
 
 public class PlayerJump implements Listener {
 
@@ -27,7 +27,7 @@ public class PlayerJump implements Listener {
             return;
         }
         //HashMap读取数据
-            int levels = Map.levels.get(uuid);
+            int levels = CaChe.levels.get(uuid);
             int multipy = Main.INSTANCE.getConfig().getInt("Level." + levels + ".Multiply");
             int y = Main.INSTANCE.getConfig().getInt("Level." + levels + ".Y");
             int cd = Main.INSTANCE.getConfig().getInt("Level." + levels + ".Cd");

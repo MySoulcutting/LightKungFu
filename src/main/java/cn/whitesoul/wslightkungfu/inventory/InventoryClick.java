@@ -1,6 +1,6 @@
 package cn.whitesoul.wslightkungfu.inventory;
 
-import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.data.CaChe;
 import cn.whitesoul.wslightkungfu.utils.Config;
 import cn.whitesoul.wslib.message.Message;
 import org.bukkit.entity.Player;
@@ -17,16 +17,16 @@ public class InventoryClick implements Listener {
             Player player = (Player) event.getWhoClicked();
             UUID uuid = player.getUniqueId();
             int maxLevel = Config.MaxLevel;
-            int level = Map.levels.get(uuid);
-            int points = Map.points.get(uuid);
+            int level = CaChe.levels.get(uuid);
+            int points = CaChe.points.get(uuid);
             if (event.getWhoClicked().getOpenInventory().getTitle().equalsIgnoreCase("§a§l轻功加点")) {
                 event.setCancelled(true);
                 if (event.getRawSlot() == 7) {
                     if (level < maxLevel) {
                         if (points >= 1) {
-                            Map.levels.put(uuid, Map.levels.get(uuid) + 1);
-                            Map.points.put(uuid, Map.points.get(uuid) - 1);
-                            Message.sendMessage(player,Config.success.replace("%0%", Map.levels.get(uuid).toString()));
+                            CaChe.levels.put(uuid, CaChe.levels.get(uuid) + 1);
+                            CaChe.points.put(uuid, CaChe.points.get(uuid) - 1);
+                            Message.sendMessage(player,Config.success.replace("%0%", CaChe.levels.get(uuid).toString()));
                             player.closeInventory();
                             MainInv.open(player);
                         } else {

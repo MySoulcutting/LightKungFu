@@ -1,7 +1,7 @@
 package cn.whitesoul.wslightkungfu.command;
 
 import cn.whitesoul.wslightkungfu.Main;
-import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.data.CaChe;
 import cn.whitesoul.wslightkungfu.inventory.MainInv;
 import cn.whitesoul.wslib.message.Message;
 import org.bukkit.Bukkit;
@@ -34,7 +34,7 @@ public class MainCommand implements CommandExecutor {
             Player target = Bukkit.getPlayer(args[1]);
             int points = Integer.parseInt(args[2]);
             UUID uuid = target.getUniqueId();
-            Map.points.put(uuid,Map.points.get(uuid) + points);
+            CaChe.points.put(uuid, CaChe.points.get(uuid) + points);
             sender.sendMessage("§f[§a轻功§f] §e你给予玩家§b " + target.getName() + "§d" + points + " §e点数!");
             Message.sendMessage(target,"§f[§a轻功§f] §e你获得了§b " + points + " §e点数!");
         }

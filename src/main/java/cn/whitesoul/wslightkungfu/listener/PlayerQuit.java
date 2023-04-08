@@ -1,6 +1,6 @@
 package cn.whitesoul.wslightkungfu.listener;
 
-import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.data.CaChe;
 import cn.whitesoul.wslib.database.mysql.Mysql;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -19,8 +19,8 @@ public class PlayerQuit implements Listener {
         String updateTableSQL = "UPDATE lightkungfu_table SET LEVELS=?, POINTS=? "
                 + " WHERE UUID = ?";
         preparedStatement = Mysql.getConn().prepareStatement(updateTableSQL);
-        preparedStatement.setInt(1, Map.levels.get(uuid));
-        preparedStatement.setInt(2, Map.points.get(uuid));
+        preparedStatement.setInt(1, CaChe.levels.get(uuid));
+        preparedStatement.setInt(2, CaChe.points.get(uuid));
         preparedStatement.setString(3, uuid.toString());
         preparedStatement.executeUpdate();
     }

@@ -1,6 +1,6 @@
 package cn.whitesoul.wslightkungfu.listener;
 
-import cn.whitesoul.wslightkungfu.data.Map;
+import cn.whitesoul.wslightkungfu.data.CaChe;
 import cn.whitesoul.wslib.database.mysql.Mysql;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.UUID;
 
-import static cn.whitesoul.wslightkungfu.data.Map.jumps;
+import static cn.whitesoul.wslightkungfu.data.CaChe.jumps;
 
 
 public class PlayerJoin implements Listener {
@@ -47,8 +47,8 @@ public class PlayerJoin implements Listener {
         while (resultSet.next()) {
             int levels = resultSet.getInt("LEVELS");
             int points = resultSet.getInt("POINTS");
-            Map.levels.put(uuid, levels);
-            Map.points.put(uuid, points);
+            CaChe.levels.put(uuid, levels);
+            CaChe.points.put(uuid, points);
         }
     }
 }
